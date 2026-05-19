@@ -5,7 +5,7 @@ pkgver=__PKGVER__
 pkgrel=1
 pkgdesc="Turn data into unreadable noise."
 arch=('x86_64')
-url="https://github.com/evolvbits/smog"
+url="https://github.com/orbitbits/smog"
 license=('custom')
 depends=('glibc' 'gcc-libs')
 install='smog.install'
@@ -15,15 +15,15 @@ options=('!strip' '!debug')
 # Before building, import the maintainer's GPG key:
 #   gpg --keyserver keyserver.ubuntu.com --recv-keys __FINGERPRINT__
 # Or via direct file:
-#   curl https://raw.githubusercontent.com/evolvbits/pubkey/main/pubkey.asc | gpg --import
+#   curl https://raw.githubusercontent.com/orbitbits/pubkey/main/pubkey.asc | gpg --import
 
 validpgpkeys=('__FINGERPRINT__')
 
 source=(
-  "smog-$pkgver-linux-x86_64::https://raw.githubusercontent.com/evolvbits/smog/binaries/v$pkgver/smog-$pkgver-linux-x86_64"
-  "SHA256SUMS::https://raw.githubusercontent.com/evolvbits/smog/binaries/v$pkgver/SHA256SUMS"
-  "SHA256SUMS.asc::https://raw.githubusercontent.com/evolvbits/smog/binaries/v$pkgver/SHA256SUMS.asc"
-  "LICENSE::https://raw.githubusercontent.com/evolvbits/smog/main/LICENSE"
+  "smog-$pkgver-linux-x86_64::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/smog-$pkgver-linux-x86_64"
+  "SHA256SUMS::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/SHA256SUMS"
+  "SHA256SUMS.asc::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/SHA256SUMS.asc"
+  "LICENSE::https://raw.githubusercontent.com/orbitbits/smog/main/LICENSE"
 )
 
 sha256sums=(

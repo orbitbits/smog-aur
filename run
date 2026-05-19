@@ -27,7 +27,7 @@ if ! command -v makepkg >/dev/null 2>&1; then
 fi
 
 # --- Download the LICENSE temporarily to calculate the hash ---
-curl -sL "https://raw.githubusercontent.com/evolvbits/smog/main/LICENSE" -o /tmp/LICENSE.tmp
+curl -sL "https://raw.githubusercontent.com/orbitbits/smog/main/LICENSE" -o /tmp/LICENSE.tmp
 LICENSE_HASH=$(sha256sum /tmp/LICENSE.tmp | awk '{print $1}')
 rm /tmp/LICENSE.tmp
 
@@ -38,7 +38,7 @@ mkdir -p $BUILD_DIR
 cp -f smog.install.template $BUILD_DIR/smog.install
 cp -f PKGBUILD.template $BUILD_DIR/PKGBUILD
 
-# --- Apply values to templates --- 
+# --- Apply values to templates ---
 sed -i -e "s/__PKGVER__/$PKGVER/" \
   -e "s/__LICENSE_HASH__/$LICENSE_HASH/" \
   -e "s/__PKGNAME__/$PKGNAME/" \
@@ -49,7 +49,7 @@ case "${1:-}" in
   build)
     cd $BUILD_DIR/
     info "Building package..."
-    rm -f $BUILD_DIR/SHA256SUMS* 
+    rm -f $BUILD_DIR/SHA256SUMS*
     makepkg --printsrcinfo > .SRCINFO
     makepkg -sf --noconfirm
     success "Build complete"
