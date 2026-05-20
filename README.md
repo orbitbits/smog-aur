@@ -100,9 +100,9 @@ Always use:
 
 ##  Official page
 
-https://orbitbits.github.io/products/smog/
+https://orbitbits.com/products/smog/
 
 
 ---
 
-© [OrbitBits](https://orbitbits.github.io) - All rights reserved.
+© [OrbitBits](https://orbitbits.com) - All rights reserved.
