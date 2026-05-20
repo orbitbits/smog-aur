@@ -100,7 +100,7 @@ Always use:
 
 ##  Official page
 
-https://orbitbits.com/products/smog/
+https://orbitbits.com/smog/
 
 
 ---
