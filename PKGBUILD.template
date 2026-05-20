@@ -22,13 +22,13 @@ validpgpkeys=('__FINGERPRINT__')
 source=(
   "smog-$pkgver-linux-x86_64::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/smog-$pkgver-linux-x86_64"
   "SHA256SUMS::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/SHA256SUMS"
-  "SHA256SUMS.asc::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/SHA256SUMS.asc"
+  "SHA256SUMS.sig::https://raw.githubusercontent.com/orbitbits/smog/binaries/v$pkgver/SHA256SUMS.sig"
   "LICENSE::https://raw.githubusercontent.com/orbitbits/smog/main/LICENSE"
 )
 
 sha256sums=(
   'SKIP'         # binary — verified via GPG
-  'SKIP'         # SHA256SUMS — verified via GPG (SHA256SUMS.asc)
+  'SKIP'         # SHA256SUMS — verified via GPG (SHA256SUMS.sig)
   'SKIP'         # GPG signature
   '__LICENSE_HASH__' # LICENSE - manual: sha256sum LICENSE
 )
