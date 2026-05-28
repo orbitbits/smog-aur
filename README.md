@@ -1,3 +1,6 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
 <p align="center">
   <img style="border-radius: 5px;" src="https://raw.githubusercontent.com/orbitbits/smog/refs/heads/main/.github/logo/compact/smog-git.svg" alt="smog" width="180"/>
 </p>
@@ -10,24 +13,24 @@ AUR packaging for **Smog**
 
 ## 🔧 Maintainer workflow (AUR)
 
-### Build package with script `run`
+### Build package with script `main.sh`
 
 ```sh
-./run build
+./main.sh build
 ```
 
-### Install package local with script `run` (test)
+### Install package local with script `main.sh` (test)
 
 ```sh
-./run install
+./main.sh install
 ```
 
-> Note: Always test with `./run install` before pushing in AUR.
+> Note: Always test with `./main.sh install` before pushing in AUR.
 
-### Clean all build with script `run`
+### Clean all build with script `main.sh`
 
 ```sh
-./run clean
+./main.sh clean
 ```
 
 ---
@@ -35,7 +38,7 @@ AUR packaging for **Smog**
 ## 🚀 Initial publish to AUR
 
 ```sh
-./run publish
+./main.sh publish
 ```
 
 ---
@@ -44,29 +47,29 @@ AUR packaging for **Smog**
 
 Example: new version `0.3.2`
 
-1. Update version in `run`:
+1 - Update version in `main.sh`:
 
 ```sh
-# edit run
+# edit main.sh
 PKGVER=0.3.2
 ```
 
-2. Recalculate checksums:
+2 - Recalculate checksums:
 
 ```sh
-./run check
+./main.sh check
 ```
 
-3. Rebuild:
+3 - Rebuild:
 
 ```sh
-./run build
+./main.sh build
 ```
 
-4. Commit and push:
+4 - Commit and push:
 
 ```sh
-./run publish
+./main.sh publish
 ```
 
 Done.
@@ -84,7 +87,7 @@ Done.
 
 * This repository does **not** contain the source code.
 * The PKGBUILD downloads the source directly from GitHub releases.
-* Always test with `./run install` before pushing.
+* Always test with `./main.sh install` before pushing.
 
 ---
 
@@ -95,13 +98,12 @@ Never update `sha256sums` by hand.
 Always use:
 
 ```sh
-./run check
+./main.sh check
 ```
 
-##  Official page
+## Official page
 
-https://orbitbits.com/smog/
-
+[https://orbitbits.com/smog/](https://orbitbits.com/smog/)
 
 ---
 
