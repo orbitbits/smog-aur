@@ -2,7 +2,7 @@
 
 pkgname=__PKGNAME__
 pkgver=__PKGVER__
-pkgrel=1
+pkgrel=__PKGREL__
 pkgdesc="Turn data into unreadable noise."
 arch=('x86_64')
 url="https://github.com/orbitbits/smog"
